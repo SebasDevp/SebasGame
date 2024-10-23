@@ -1,0 +1,84 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #000; /* Fondo negro */
+    color: #00ffff; /* Color neón azul */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+.app {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(45deg, #000, #001f3f);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 20px #00ffff;
+    width: 400px;
+    height: 400px;
+}
+
+.background-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 5rem;
+    color: rgba(0, 255, 255, 0.1); /* Neón opaco para el fondo */
+    z-index: -1;
+    text-shadow: 0 0 10px #00ffff;
+}
+
+.board {
+    z-index: 1;
+}
+
+.square {
+    background: #001f3f;
+    border: 1px solid #00ffff;
+    color: #00ffff;
+    font-size: 2rem;
+    width: 100px;
+    height: 100px;
+    transition: background 0.3s;
+}
+
+.square:hover {
+    background: #00ffff;
+    color: #001f3f;
+}
+
+.board-row {
+    display: flex;
+}
+
+.status {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    color: #00ffff;
+}
+
+/* Estilos para el texto flotante */
+.floating-text {
+    position: absolute;
+    font-size: 3rem;
+    color: #00ffff;
+    text-shadow: 0 0 15px #00ffff, 0 0 30px #00ffff;
+    z-index: -1;
+    animation: neonGlow 1.5s infinite alternate;
+}
+
+@keyframes neonGlow {
+    from {
+        text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
+    }
+    to {
+        text-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff;
+    }
+}
